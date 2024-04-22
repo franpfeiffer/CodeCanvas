@@ -24,7 +24,6 @@ export default function Home() {
     const editorElem = editorRef.current;
 
     if (editorElem) {
-      //hide elemnets
       const handleElems = document.querySelectorAll(".handle") as any;
       const cursorElem = document.querySelector(".ace_cursor") as any;
       const codetitle = document.querySelector(".code-title") as any;
@@ -47,7 +46,6 @@ export default function Home() {
       link.href = image;
       link.click();
 
-      //show elements
       handleElems.forEach((elem: any) => {
         elem.style.display = "block";
       });

@@ -59,15 +59,15 @@ export const backgrounds = [
   "linear-gradient(270deg,#514a9d,#24c6dc)",
 ];
 
-export const initialCode = `function guessMyNumber() {
-  const userGuess = prompt("Guess a number between 1 and 10:");
-  const secretNumber = Math.ceil(Math.random() * 10);
-
-  if (parseInt(userGuess) === secretNumber) {
-    return "Wow, you must be a psychic!";
-  } else {
-    return \`Nope, the number was \${secretNumber}. Better luck next time!\`;
-  }
+export const initialCode = `function fibonacci(n) {
+    let a = 0, b = 1;
+    for (let i = 2; i <= n; i++) {
+        let temp = b;
+        b = a + b;
+        a = temp;
+    }
+    return b;
 }
 
-console.log(guessMyNumber());`;
+// Example:
+console.log(fibonacci(5)); // Output: 5 (Fibonacci sequence: 0, 1, 1, 2, 3, 5)`;

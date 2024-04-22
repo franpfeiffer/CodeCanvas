@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import { Resizable } from "re-resizable";
 import AceEditor from "react-ace";
 
-//languages
 import "ace-builds/src-noconflict/mode-javascript";
 import "ace-builds/src-noconflict/mode-html";
 import "ace-builds/src-noconflict/mode-css";
@@ -11,7 +10,6 @@ import "ace-builds/src-noconflict/mode-python";
 import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/mode-typescript";
 
-//themes
 import "ace-builds/src-noconflict/theme-monokai";
 import "ace-builds/src-noconflict/theme-terminal";
 import "ace-builds/src-noconflict/theme-twilight";
@@ -40,7 +38,6 @@ function CodeEditor({
   const [extension, setExtension] = React.useState(".js");
 
   useEffect(() => {
-    // Update the extension when the language changes
     setExtension(getExtension(language));
   }, [language]);
 
@@ -49,7 +46,6 @@ function CodeEditor({
   };
 
   const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    // Extract the title without the extension
     const newTitle = e.target.value.split(".")[0];
     setTitle(newTitle);
   };
